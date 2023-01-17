@@ -1,0 +1,22 @@
+body {
+    font: 14px 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    line-height: 1.4em;
+    background: lightskyblue;
+    color: red;
+    min-width: 300px;
+    max-width: 300px;
+    margin: 0 auto;
+    font-weight: 300;
+}
+#filtered-todos {
+    position: absolute;
+    right:500px;
+    top:0;
+    width: auto;
+}
+
+
+
+    
+
+
