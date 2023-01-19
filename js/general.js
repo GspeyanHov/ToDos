@@ -43,6 +43,7 @@ function reRenderTodoListItems(todos) {
 }
 
 function renderTodoListItems(todoList = todos) {
+    todoList = todoList.filter(todo => !todo.deleted);
     todoList.forEach(todo => {
         const itemContainer = createElement('li');
 
@@ -66,6 +67,7 @@ function renderTodoListItems(todoList = todos) {
         itemDelete.onclick = () => {
             const currentTodoIndex = todoList.findIndex(t => t === todo);
             todoList.splice(currentTodoIndex, 1);
+            todo.deleted = true;
             reRenderTodoListItems(todoList);
         }
         itemContainer.appendChild(itemDelete);
